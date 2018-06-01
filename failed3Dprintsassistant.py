@@ -2,20 +2,7 @@
 # Tool to fix gcode
 # Written by Roy Pe'er, 2018
 
-'''
-gcode = open('car.txt','r')
-gcode = gcode.readlines()
 
-for i in range(len(gcode)):
-    if('Z24' in gcode[i]):
-            print(i)
-
-
-gcode = gcode[112615:]
-newcode = open("newcode200.txt",'w')
-newcode.writelines(gcode)
-newcode.close()
-'''
 
 
 
@@ -57,7 +44,6 @@ for i in range(len(gcode)):
             z_vals_location.append((z_val,i)) # Location and Z values.
 
 
-#print(z_vals_location)
 
 print("\nHere are some possible initial Z values to restart the print with: ")
 for i in range(len(z_vals_location)):
@@ -67,7 +53,6 @@ choice = input('Enter the number of initial Z value you would like to use: ')
 
 z_val_andloc = z_vals_location[int(choice) - 1]
 
-#print(z_val)
 
 def new_gcode(current_gcode,loc,newfilename):
     current_gcode = current_gcode[loc:]
