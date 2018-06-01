@@ -1,2 +1,2 @@
 # Failed_3DPrints_Assistant
-A python script that helps easily continue prints that stopped mid-way.
+A python script that helps easily continue 3D prints that stopped mid-way.
