@@ -18,4 +18,4 @@ script generated:
 
 
 final result:
-![Something wen't wrong with the picture.](demo3.JPG "Assistant Demo")
+![Something wen't wrong with the picture.](demo3.JPEG "Assistant Demo")
