@@ -27,7 +27,7 @@ gcode_loc = input("Enter location of original GCODE (save as txt file ! e.g. C:\
 gcode = open(str(gcode_loc),'r')
 gcode = gcode.readlines()
 
-approx_z = float(input("Enter approximated Z value where print stopped(e.g. 24.7): "))
+approx_z = float(input("Enter approximated Z value where print stopped (e.g. 24.7): "))
 z_vals_location = []
 for i in range(len(gcode)):
     if(('Z' + str(int(approx_z-1))) in gcode[i]):
