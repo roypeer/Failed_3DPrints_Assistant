@@ -23,11 +23,11 @@ print(open_screen)
 
 
 
-gcode_loc = input("Enter location of original GCODE (save as txt file !): ")
+gcode_loc = input("Enter location of original GCODE (save as txt file ! e.g. C:\car.txt): ")
 gcode = open(str(gcode_loc),'r')
 gcode = gcode.readlines()
 
-approx_z = float(input("Enter approximated Z value where print stopped: "))
+approx_z = float(input("Enter approximated Z value where print stopped(e.g. 24.7): "))
 z_vals_location = []
 for i in range(len(gcode)):
     if(('Z' + str(int(approx_z-1))) in gcode[i]):
@@ -61,7 +61,7 @@ def new_gcode(current_gcode,loc,newfilename):
     newcode.close()
 
 
-filename = input("How would you like the new gcode file to be named ? ")
+filename = input("How would you like the new gcode file to be named (e.g. carfixed) ? ")
 new_gcode(gcode,z_val_andloc[1],filename)
 print('Saved new gcode starting from z height ' + z_val_andloc[0] + ' as a txt file called ' + filename + '.txt')
 print('Warm up your printer, make sure it is aware of its location (Home all axis if needed), copy the new gcode to the host software and continue the print ')
